@@ -1,3 +1,14 @@
+# ----------------------------------------------------------------------------
+# Project: OneShot-arman
+# Developed by: Arman
+# GitHub: https://github.com/yottabytesystem/OneShot-arman
+#
+# Copyright (C) 2026 Arman. All Rights Reserved.
+# Licensed under the GNU General Public License v3.0 (GPLv3).
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# ----------------------------------------------------------------------------
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import sys
