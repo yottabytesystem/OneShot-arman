@@ -1,7 +1,7 @@
 # 🚀 OneShot-arman
 **The Most Reliable WPS Analysis & Pixie Dust Attack Tool for Linux & Termux**
 
-OneShot-arman performs Pixie Dust attack without having to switch to monitor mode. Developed and optimized by **Arman**, this tool is designed for efficient network security testing on both Android (Termux) and desktop Linux.
+OneShot-arman performs Pixie Dust attack without having to switch to monitor mode. Developed and optimized by **Arman**, this tool is designed for efficient network security testing.
 
 ---
 
@@ -9,57 +9,61 @@ OneShot-arman performs Pixie Dust attack without having to switch to monitor mod
  - **Pixie Dust attack:** Fast offline WPS attack.
  - **PIN Generator:** Integrated 3WiFi offline WPS PIN generator.
  - **Online Bruteforce:** Support for online WPS bruteforce.
- - **Wi-Fi Scanner:** Highlighting based on iw for easy target identification.
+ - **Wi-Fi Scanner:** Highlighting based on `iw` for target identification.
 
 ---
 
-## 🛠️ Installation & Setup (Termux)
-Root access is required for Android devices. Copy and paste the following commands:
+## 🛠️ Installation & Requirements
 
-pkg update -y && pkg install -y root-repo
-pkg install -y git tsu python wpa-supplicant pixiewps iw openssl
-git clone https://github.com/yottabytesystem/OneShot-arman
+### 📱 Termux (Root Required)
+```bash
+pkg update -y && pkg install -y root-repo && pkg install -y git tsu python wpa-supplicant pixiewps iw openssl && git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman) && cd OneShot-arman && chmod +x installer.sh oneshot.py && sudo ./installer.sh
+
+
+🐧 Debian/Ubuntu
+
+sudo apt update && sudo apt install -y python3 wpasupplicant iw wget pixiewps git
+git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman)
 cd OneShot-arman
-chmod +x installer.sh oneshot.py
-sudo ./installer.sh
-
----
-
-## 🚀 Usage Examples
-
-**Show available networks and start Pixie Dust attack:**
 sudo python3 oneshot.py -i wlan0 -K
 
-**Start Pixie Dust attack on a specified BSSID:**
-sudo python3 oneshot.py -i wlan0 -b 00:90:4C:C1:AC:21 -K
+🏔️ Arch Linux
 
----
+sudo pacman -S wpa_supplicant pixiewps wget python git
+git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman)
+cd OneShot-arman
 
-## ⚙️ Arguments Summary
-| Argument | Description |
-| :--- | :--- |
-| -i, --interface | Name of the interface to use (e.g., wlan0) |
-| -b, --bssid | BSSID of the target AP |
-| -K, --pixie-dust | Run Pixie Dust attack |
-| -B, --bruteforce | Run online bruteforce attack |
-| --mtk-wifi | Activate MediaTek Wi-Fi driver support |
+❄️ Alpine Linux
 
----
+sudo sh -c 'echo "[http://dl-cdn.alpinelinux.org/alpine/edge/testing/](http://dl-cdn.alpinelinux.org/alpine/edge/testing/)" >> /etc/apk/repositories'
+sudo apk add python3 wpa_supplicant pixiewps iw
+git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman)
+cd OneShot-arman
 
-## 🆘 Troubleshooting
-- **RF-kill Error:** Run sudo rfkill unblock wifi.
-- **Resource Busy:** Disable Wi-Fi in settings or use --iface-down.
-- **MediaTek Devices:** Use the --mtk-wifi flag if the interface disappears on Android.
+🚀 Usage Examples
+Show available networks and start Pixie Dust attack:
 
----
+sudo python3 oneshot.py -i wlan0 -K
 
-## 👤 Credits & Author
-- **Maintained by:** Arman (github.com/yottabytesystem)
-- **Original Implementation:** rofl0r
-- **Special Thanks:** Monohrom, Wiire
+Launch online WPS bruteforce with first half of PIN:
 
-## 📜 License
+sudo python3 oneshot.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
+
+⚙️ Arguments Summary
+-i, --interface : Name of the interface to use (e.g., wlan0)
+-b, --bssid     : BSSID of the target AP
+-K, --pixie-dust : Run Pixie Dust attack
+-B, --bruteforce : Run online bruteforce attack
+--mtk-wifi      : Activate MediaTek Wi-Fi driver support
+--iface-down    : Down interface when finished
+🆘 Troubleshooting
+RF-kill Error: Run sudo rfkill unblock wifi.
+Resource Busy: Disable Wi-Fi in settings or use --iface-down.
+MediaTek Devices: Use the --mtk-wifi flag on Android.
+👤 Credits & Author
+Lead Developer: Arman
+Original Implementation: rofl0r
+Contributors: Monohrom, Wiire (Pixiewps)
+📜 License
 This project is licensed under the GNU General Public License v3.0.
-
----
-*Keywords: oneshot arman, oneshot-arman, wps attack termux, arman github tool, yottabytesystem*
+Keywords: oneshot arman, oneshot-arman, wps attack, termux network tool, arman github
