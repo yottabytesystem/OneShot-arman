@@ -1065,3 +1065,4 @@ if __name__ == '__main__':
 
     if args.mtk_wifi:
         wmtWifi_device.write_text("0")
+
