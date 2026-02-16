@@ -78,7 +78,7 @@ Please note that root access is required.
 
 #### Using installer
  ```
- curl -sSf https://raw.githubusercontent.com/drygdryg/OneShot_Termux_installer/master/installer.sh | bash
+ curl -sL https://raw.githubusercontent.com/yottabytesystem/OneShot-arman/main/installer.sh
  ```
 #### Manually
 **Installing requirements**
