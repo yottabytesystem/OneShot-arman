@@ -15,26 +15,24 @@ OneShot-arman performs [Pixie Dust attack](https://forums.kali.org/showthread.ph
 
 ## 🛠️ Installation & Setup
 
+
 ### 📱 Termux (Root Required)
+
 ```bash
 pkg update -y && pkg install -y root-repo && pkg install -y git tsu python wpa-supplicant pixiewps iw openssl && git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman) && cd OneShot-arman && chmod +x installer.sh oneshot.py && sudo ./installer.sh
 
 ```
 🐧 Debian/Ubuntu
-
 ```
 sudo apt update && sudo apt install -y python3 wpasupplicant iw wget pixiewps git && git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman) && cd OneShot-arman && sudo python3 oneshot.py -i wlan0 -K
 
 ```
 🏔️ Arch Linux
 ```
-
-
 sudo pacman -S wpa_supplicant pixiewps wget python git && git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman) && cd OneShot-arman
 
 ```
 ❄️ Alpine Linux
-
 ```
 sudo sh -c 'echo "[http://dl-cdn.alpinelinux.org/alpine/edge/testing/](http://dl-cdn.alpinelinux.org/alpine/edge/testing/)" >> /etc/apk/repositories'
 sudo apk add python3 wpa_supplicant pixiewps iw
@@ -43,28 +41,31 @@ cd OneShot-arman
 
 ```
 🚀 Usage Examples:
-```
-
 
 Show available networks and start Pixie Dust attack:
-
+```
 sudo python3 oneshot.py -i wlan0 -K
 
+```
 Launch online WPS bruteforce with first half of PIN:
-
+```
 sudo python3 oneshot.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
 
 ```
-⚙️ Arguments Summary:
+### ⚙️ Arguments Summary
 
--i, --interface : Name of the interface to use (e.g., wlan0)
--b, --bssid     : BSSID of the target AP
--K, --pixie-dust : Run Pixie Dust attack
--B, --bruteforce : Run online bruteforce attack
---mtk-wifi      : Activate MediaTek Wi-Fi driver support
---iface-down    : Down interface when finished
 
-🆘 Troubleshooting:
+
+| Argument         | Description                                |
+| ---------------- | ------------------------------------------ |
+| -i, --interface  | Name of the interface to use (e.g., wlan0) |
+| -b, --bssid      | BSSID of the target AP                     |
+| -K, --pixie-dust | Run Pixie Dust attack                      |
+| -B, --bruteforce | Run online bruteforce attack               |
+| --mtk-wifi       | Activate MediaTek Wi-Fi driver support     |
+| --iface-down     | Down interface when finished               |
+
+🆘 Troubleshooting
 
 RF-kill Error: Run sudo rfkill unblock wifi.
 Resource Busy: Disable Wi-Fi in settings or use --iface-down.
