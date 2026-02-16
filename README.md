@@ -78,7 +78,8 @@ Please note that root access is required.
 
 #### Using installer
  ```
- curl -sL https://raw.githubusercontent.com/yottabytesystem/OneShot-arman/main/installer.sh
+pkg update -y && pkg install -y root-repo && pkg install -y git tsu python wpa-supplicant pixiewps iw openssl && git clone https://github.com/yottabytesystem/OneShot-arman && mv OneShot-arman/* ~ && rm -rf OneShot-arman && chmod +x installer.sh oneshot.py && sudo ./installer.sh
+
  ```
 #### Manually
 **Installing requirements**
