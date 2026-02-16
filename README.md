@@ -19,14 +19,19 @@ OneShot-arman performs [Pixie Dust attack](https://forums.kali.org/showthread.ph
 ```bash
 pkg update -y && pkg install -y root-repo && pkg install -y git tsu python wpa-supplicant pixiewps iw openssl && git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman) && cd OneShot-arman && chmod +x installer.sh oneshot.py && sudo ./installer.sh
 
-
+```
 🐧 Debian/Ubuntu
 
+```
 sudo apt update && sudo apt install -y python3 wpasupplicant iw wget pixiewps git && git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman) && cd OneShot-arman && sudo python3 oneshot.py -i wlan0 -K
 
+```
 🏔️ Arch Linux
+```
+
 
 sudo pacman -S wpa_supplicant pixiewps wget python git && git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman) && cd OneShot-arman
+
 ```
 ❄️ Alpine Linux
 
@@ -36,7 +41,10 @@ sudo apk add python3 wpa_supplicant pixiewps iw
 git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman)
 cd OneShot-arman
 
-🚀 Usage Examples
+```
+🚀 Usage Examples:
+```
+
 
 Show available networks and start Pixie Dust attack:
 
@@ -46,7 +54,8 @@ Launch online WPS bruteforce with first half of PIN:
 
 sudo python3 oneshot.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
 
-⚙️ Arguments Summary
+```
+⚙️ Arguments Summary:
 
 -i, --interface : Name of the interface to use (e.g., wlan0)
 -b, --bssid     : BSSID of the target AP
@@ -55,7 +64,7 @@ sudo python3 oneshot.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
 --mtk-wifi      : Activate MediaTek Wi-Fi driver support
 --iface-down    : Down interface when finished
 
-🆘 Troubleshooting
+🆘 Troubleshooting:
 
 RF-kill Error: Run sudo rfkill unblock wifi.
 Resource Busy: Disable Wi-Fi in settings or use --iface-down.
