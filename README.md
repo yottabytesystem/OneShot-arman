@@ -27,9 +27,10 @@ sudo apt update && sudo apt install -y python3 wpasupplicant iw wget pixiewps gi
 🏔️ Arch Linux
 
 sudo pacman -S wpa_supplicant pixiewps wget python git && git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman) && cd OneShot-arman
-
+```
 ❄️ Alpine Linux
 
+```
 sudo sh -c 'echo "[http://dl-cdn.alpinelinux.org/alpine/edge/testing/](http://dl-cdn.alpinelinux.org/alpine/edge/testing/)" >> /etc/apk/repositories'
 sudo apk add python3 wpa_supplicant pixiewps iw
 git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman)
@@ -42,7 +43,7 @@ Show available networks and start Pixie Dust attack:
 sudo python3 oneshot.py -i wlan0 -K
 
 Launch online WPS bruteforce with first half of PIN:
-```
+
 sudo python3 oneshot.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
 
 ⚙️ Arguments Summary
