@@ -1,19 +1,19 @@
 # 🚀 OneShot-arman
 **The Most Reliable WPS Analysis & Pixie Dust Attack Tool for Linux & Termux**
 
-OneShot-arman performs Pixie Dust attack without having to switch to monitor mode. Developed and optimized by **Arman**, this tool is designed for efficient network security testing.
+OneShot-arman performs [Pixie Dust attack](https://forums.kali.org/showthread.php?24286-WPS-Pixie-Dust-Attack-Offline-WPS-Attack) without having to switch to monitor mode. Developed and optimized by **Arman** for high-performance network security testing.
 
 ---
 
 ## ✨ Features
- - **Pixie Dust attack:** Fast offline WPS attack.
- - **PIN Generator:** Integrated 3WiFi offline WPS PIN generator.
- - **Online Bruteforce:** Support for online WPS bruteforce.
- - **Wi-Fi Scanner:** Highlighting based on `iw` for target identification.
+- **Pixie Dust attack:** Fast offline WPS attack.
+- **PIN Generator:** Integrated [3WiFi offline WPS PIN generator](https://3wifi.stascorp.com/wpspin).
+- **Online Bruteforce:** Support for [online WPS bruteforce](https://sviehb.files.wordpress.com/2011/12/viehboeck_wps.pdf).
+- **Wi-Fi Scanner:** Advanced scanning with `iw`.
 
 ---
 
-## 🛠️ Installation & Requirements
+## 🛠️ Installation & Setup
 
 ### 📱 Termux (Root Required)
 ```bash
@@ -21,20 +21,15 @@ pkg update -y && pkg install -y root-repo && pkg install -y git tsu python wpa-s
 
 
 🐧 Debian/Ubuntu
-```bash
-sudo apt update && sudo apt install -y python3 wpasupplicant iw wget pixiewps git
-git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman)
-cd OneShot-arman
-sudo python3 oneshot.py -i wlan0 -K
+
+sudo apt update && sudo apt install -y python3 wpasupplicant iw wget pixiewps git && git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman) && cd OneShot-arman && sudo python3 oneshot.py -i wlan0 -K
 
 🏔️ Arch Linux
-```bash
-sudo pacman -S wpa_supplicant pixiewps wget python git
-git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman)
-cd OneShot-arman
+
+sudo pacman -S wpa_supplicant pixiewps wget python git && git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman) && cd OneShot-arman
 
 ❄️ Alpine Linux
-```bash
+
 sudo sh -c 'echo "[http://dl-cdn.alpinelinux.org/alpine/edge/testing/](http://dl-cdn.alpinelinux.org/alpine/edge/testing/)" >> /etc/apk/repositories'
 sudo apk add python3 wpa_supplicant pixiewps iw
 git clone [https://github.com/yottabytesystem/OneShot-arman](https://github.com/yottabytesystem/OneShot-arman)
@@ -43,7 +38,7 @@ cd OneShot-arman
 🚀 Usage Examples
 
 Show available networks and start Pixie Dust attack:
-```bash
+```
 sudo python3 oneshot.py -i wlan0 -K
 
 Launch online WPS bruteforce with first half of PIN:
