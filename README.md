@@ -38,11 +38,11 @@ cd OneShot-arman
 🚀 Usage Examples
 
 Show available networks and start Pixie Dust attack:
-```
+
 sudo python3 oneshot.py -i wlan0 -K
 
 Launch online WPS bruteforce with first half of PIN:
-```bash
+```
 sudo python3 oneshot.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
 
 ⚙️ Arguments Summary
