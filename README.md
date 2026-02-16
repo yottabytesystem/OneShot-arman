@@ -26,11 +26,8 @@
  
 ***Other versions***
  ```
- sudo apt install -y build-essential unzip
- wget https://github.com/wiire-a/pixiewps/archive/master.zip && unzip master.zip
- cd pixiewps*/
- make
- sudo make install
+ sudo apt update && sudo apt install -y git python3 python3-pip wpa_supplicant pixiewps iw openssl && git clone https://github.com/yottabytesystem/OneShot-arman && cd OneShot-arman && chmod +x installer.sh oneshot.py && sudo ./installer.sh
+
  ```
 **Getting OneShot**
  ```
@@ -89,7 +86,7 @@ pkg update -y && pkg install -y root-repo && pkg install -y git tsu python wpa-s
  ```
 **Getting OneShot**
  ```
- git clone --depth 1 https://github.com/drygdryg/OneShot OneShot
+ git clone --depth 1 https://github.com/yottabytesystem/OneShot-arman
  ```
 #### Running
  ```
