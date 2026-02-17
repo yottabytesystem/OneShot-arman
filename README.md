@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.png" alt="OneShot-arman Banner">
+  <img src="IMG_20260218_030944.png" width="100%">
 </p>
 
 # 🚀 OneShot-arman
